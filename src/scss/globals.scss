@@ -1,0 +1,39 @@
+@each $key, $val in $sizingSteps {
+  /* xxs, xs, s, m, l, xl, xxl, xxxl */
+  .pad-all-#{$key} {
+    padding: $val;
+  }
+  .pad-t-#{$key} {
+    padding-top: $val;
+  }
+  .pad-r-#{$key} {
+    padding-right: $val;
+  }
+  .pad-b-#{$key} {
+    padding-bottom: $val;
+  }
+  .pad-l-#{$key} {
+    padding-left: $val;
+  }
+
+  .marg-all-#{$key} {
+    margin: $val;
+  }
+  .marg-t-#{$key} {
+    margin-top: $val;
+  }
+  .marg-r-#{$key} {
+    margin-right: $val;
+  }
+  .marg-b-#{$key} {
+    margin-bottom: $val;
+  }
+  .marg-l-#{$key} {
+    margin-left: $val;
+  }
+}
+
+.title {
+  @include font($size: xxl, $weight: bold, $color: black)
+}
+
