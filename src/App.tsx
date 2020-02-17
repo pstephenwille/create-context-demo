@@ -1,29 +1,44 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
+import { createHashHistory } from 'history';
 import logo from './logo.svg';
-import './App.css';
+import './App.scss';
 import Home from "./mm-tool-1/home/Home";
 import Home2 from "./mm-tool-2/home/Home2";
+import SideBar from "./side-bar/SideBar";
+import axios from 'axios';
+import Main from "./main/Main";
+import {ActiveToolContext, ActiveToolProvider} from "./active-tool-context";
 
-const App = (props) => {
-    const [toolToggle, setToolName] = useState(false);
+const App = () => {
+    const history = createHashHistory();
+    const [categories, setCategories] = useState([]);
 
-    let toggleTool = () => {
-        setToolName(!toolToggle)
-        console.log('...toggle', window.location.hash);
-        toolToggle
-            ? window.location.hash = '#/mm-tools2'
-            : window.location.hash = '#/services';
+    useEffect(
+        () => {
+            axios.get('http://localhost:3001/v2/tools').then(resp => {
+                setCategories(resp['data']['tools']);
+            })
+        }, []);
 
-    };
+
+
+
     return (
         <div className="App">
-            <h1>Tools</h1>
-            <div onClick={() => toggleTool()}>Toggle tools <strong>{toolToggle.toString()}</strong></div>
-            {
-                toolToggle
-                    ? <Home/>
-                    : <Home2/>
-            }
+            <ActiveToolProvider history={history}>
+                <header>
+                    <p>Tools Portal</p>
+                </header>
+
+                <SideBar categories={categories} history={history}/>
+
+
+                <Main categories={categories} hitory={history}/>
+
+                <footer>
+                    Footer
+                </footer>
+            </ActiveToolProvider>
         </div>
     );
 };

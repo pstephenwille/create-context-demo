@@ -14,7 +14,7 @@ export default (props) => {
         <ReferenceInput
             key={name}
             source={name}
-            reference="services"
+            reference="mm-tools2"
             translateChoice={false}
             filterToQuery={searchTerm => ({[`q?_${name}`]: searchTerm})}>
             <AutocompleteInput
