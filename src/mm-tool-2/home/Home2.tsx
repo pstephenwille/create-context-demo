@@ -1,7 +1,7 @@
 import React from 'react';
-import {Admin, Resource, fetchUtils} from 'react-admin';
+import {Admin as Admin2, Resource, fetchUtils} from 'react-admin';
 import tccDataProvider from '../common/tcc-data-provider';
-import {ServicesList} from "./ServicesList";
+import {ServicesList as Home2Service} from "./ServicesList";
 import {TccOverrides, TccPaths} from '../constants/overrides_const';
 import {Route} from 'react-router-dom';
 
@@ -13,23 +13,20 @@ const dataProvider = tccDataProvider(TccPaths.base + TccPaths.resources, fetchUt
 
 
 export default (props) => {
-    console.log('...mm-tool 2', Object.keys(props));
-    props = {...props, ...Resource};
 
     return (
-        <Admin
+        <Admin2
             layout={TccLayout}
             dataProvider={dataProvider}
-            {...props}
             customRoutes={[
                 <Route
                     exact
-                    path="/asset-detail/:name"
+                    path="/mm-tools2/asset-detail/:name"
                     component={(props) => <AssetDetails {...props} />}/>
 
             ]}>
-            <Resource name={'mm-tools2'} list={ServicesList}/>
-        </Admin>
+            <Resource name={'mm-tools2'} list={Home2Service}/>
+        </Admin2>
     )
 };
 

@@ -1,14 +1,13 @@
 import React, {useEffect, useState} from 'react';
-import logo from './logo.svg';
+import { createHashHistory } from 'history';
 import './App.scss';
-import Home from "./mm-tool-1/home/Home";
-import Home2 from "./mm-tool-2/home/Home2";
 import SideBar from "./side-bar/SideBar";
 import axios from 'axios';
 import Main from "./main/Main";
-import {ActiveToolContext} from "./active-tool-context";
+import {ActiveToolProvider} from "./active-tool-context";
 
 const App = () => {
+    const history = createHashHistory();
     const [categories, setCategories] = useState([]);
 
     useEffect(
@@ -18,34 +17,25 @@ const App = () => {
             })
         }, []);
 
-    const [activeTool, setActiveTool] = useState('');
-    const contextValue = {activeTool, setActiveTool}
 
 
-    const showTool = (name) => {
-        const toolNum = name.match(/\d+/);
-
-        (toolNum % 2 == 0)
-            ? window.location.href = '#/services'
-            : window.location.href = '#/mm-tools2'
-    };
 
     return (
         <div className="App">
-            <ActiveToolContext.Provider value={contextValue}>
+            <ActiveToolProvider history={history}>
                 <header>
                     <p>Tools Portal</p>
                 </header>
 
-                <SideBar categories={categories}/>
+                <SideBar categories={categories} history={history}/>
 
 
-                <Main categories={categories}/>
+                <Main categories={categories} hitory={history}/>
 
                 <footer>
                     Footer
                 </footer>
-            </ActiveToolContext.Provider>
+            </ActiveToolProvider>
         </div>
     );
 };

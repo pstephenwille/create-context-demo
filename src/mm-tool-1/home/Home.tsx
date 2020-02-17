@@ -17,11 +17,10 @@ export default (props) => {
         <Admin
             layout={TccLayout}
             dataProvider={dataProvider}
-            {...props}
             customRoutes={[
                 <Route
                     exact
-                    path="/asset-detail/:name"
+                    path="/services/asset-detail/:name"
                     component={(props) => <AssetDetails {...props} />}/>
 
             ]}>

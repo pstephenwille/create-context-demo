@@ -1,13 +1,12 @@
 html {
-  -webkit-font-smoothing: subpixel-antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  smoothing: antialiased;
+
 }
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
   'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
   sans-serif;
-  smoothing: antialiased;
   font-size: 100%;
   line-height: 1;
   margin: 0;
@@ -35,16 +34,12 @@ footer {
   }
 
 }
-
+main{
+  background-color: white;
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
   monospace;
 }
 
-//header,
-//main,
-//footer {
-//  display: flex;
-//  align-items: center;
-//  justify-content: center;
-//}
+

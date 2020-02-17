@@ -2,7 +2,7 @@ import React from 'react';
 import {Button, Card} from "@material-ui/core";
 
 function returnHome(props:any) {
-    props.history.push("/services");
+    props.history.push("/mm-tools2");
 }
 
 export default (props:any) => (
