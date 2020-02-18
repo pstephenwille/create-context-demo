@@ -13,18 +13,14 @@ const dataProvider = tccDataProvider(TccPaths.base + TccPaths.resources, fetchUt
 
 
 export default (props) => {
-    console.log('...mm-tool', Object.keys(props));
-    props = {...props, ...Resource};
-
     return (
         <Admin
             layout={TccLayout}
             dataProvider={dataProvider}
-            {...props}
             customRoutes={[
                 <Route
                     exact
-                    path="/asset-detail/:name"
+                    path="/services/asset-detail/:name"
                     component={(props) => <AssetDetails {...props} />}/>
 
             ]}>
