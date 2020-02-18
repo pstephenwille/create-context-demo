@@ -6,17 +6,18 @@ import Home2 from "../mm-tool-2/home/Home2";
 
 export default (props) => {
     const {activeTool} = useContext(ActiveToolContext);
+    console.log('...props history ', props.history);
     const switchTool = () => {
         if (activeTool.match(/(service)/i)) {
-            return (<Home />);
+            return (<Home history={props.history}/>);
         }
 
         if (activeTool.match(/mm-tools2/i)) {
-            return (<Home2 />);
+            return (<Home2 history={props.history}/>);
         }
 
 
-        return props.categories.map((cat, idx) => {
+        return props.tools.map((cat, idx) => {
             return (
                 <div key={'cat-' + idx}>
                     <h1>{cat.category.name} - {activeTool}</h1>
@@ -39,14 +40,15 @@ export default (props) => {
 
     return (
         <ActiveToolConsumer>
-            {({activeTool}) =>{
-              return (
-                <main>
-                    {
-                        switchTool()
-                    }
-                </main>
-            )}}
+            {({activeTool}) => {
+                return (
+                    <main>
+                        {
+                            switchTool()
+                        }
+                    </main>
+                )
+            }}
 
         </ActiveToolConsumer>
     )

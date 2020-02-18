@@ -1,0 +1,11 @@
+.__tool-name{
+  &__sub-tool{
+  opacity: 0.5;
+    &--collapsed{
+      display: none;
+    }
+    &--expanded{
+      display: block;
+    }
+  }
+}

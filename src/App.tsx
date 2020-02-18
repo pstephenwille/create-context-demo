@@ -8,12 +8,12 @@ import {ActiveToolProvider} from "./active-tool-context";
 
 const App = () => {
     const history = createHashHistory();
-    const [categories, setCategories] = useState([]);
+    const [tools, setTools] = useState([]);
 
     useEffect(
         () => {
             axios.get('http://localhost:3001/v2/tools').then(resp => {
-                setCategories(resp['data']['tools']);
+                setTools(resp['data']['tools']);
             })
         }, []);
 
@@ -27,10 +27,10 @@ const App = () => {
                     <p>Tools Portal</p>
                 </header>
 
-                <SideBar categories={categories} history={history}/>
+                <SideBar tools={tools} history={history}/>
 
 
-                <Main categories={categories} hitory={history}/>
+                <Main tools={tools} hitory={history}/>
 
                 <footer>
                     Footer

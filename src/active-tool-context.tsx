@@ -31,7 +31,6 @@ class ActiveToolProvider extends React.Component<any, any> {
                 break;
             case 'service-details':
                 this.props.history.push('/services/asset-detail/customer-insights');
-
                 break;
             default:
                 this.props.history.push('/');
