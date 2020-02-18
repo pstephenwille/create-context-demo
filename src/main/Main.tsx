@@ -6,6 +6,7 @@ import Home2 from "../mm-tool-2/home/Home2";
 
 export default (props) => {
     const {activeTool} = useContext(ActiveToolContext);
+    console.log('...props history ', props.history);
     const switchTool = () => {
         if (activeTool.match(/service/i)) {
             return (<Home history={props.history}/>);
