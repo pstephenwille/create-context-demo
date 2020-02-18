@@ -6,11 +6,13 @@ const TccNoAppBar = props => ('');
 const TccNoSideBar = props => ('');
 
 const TccLayout = props => {
-    return (<Layout
-        {...props}
-        appBar={TccNoAppBar}
-        sidebar={TccNoSideBar}
-    />);
+    return (
+        <Layout
+            {...props}
+            appBar={TccNoAppBar}
+            sidebar={TccNoSideBar}
+        />
+    );
 };
 
 export default TccLayout;

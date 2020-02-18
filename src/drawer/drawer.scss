@@ -1,0 +1,11 @@
+.drawer {
+  &__items {
+    &--open {
+      display: block;
+    }
+
+    &--closed {
+      display: none;
+    }
+  }
+}

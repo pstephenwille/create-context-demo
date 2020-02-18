@@ -4,7 +4,7 @@ import ServicesFilter from './ServicesFilter';
 import {TccOverrides} from '../constants/overrides_const';
 
 function handleClick(name, props) {
-    props.history.push("/asset-detail/" + name);
+    props.history.push("/services/asset-detail/" + name);
 }
 
 export const ServicesList = props => (

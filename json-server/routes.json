@@ -3,5 +3,5 @@
   "/v2/resources/services?*": "/stubbed",
   "/v2/resources/mm-tools2": "/stubbed",
   "/v2/resources/mm-tools2?*": "/stubbed",
-  "/v2/tools?*": "/stubbed"
+  "/v2/tools": "/stubbed"
 }
