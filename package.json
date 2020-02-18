@@ -12,6 +12,7 @@
     "@types/react": "^16.9.19",
     "@types/react-dom": "^16.9.5",
     "axios": "^0.19.2",
+    "cypress": "^4.0.2",
     "json-server": "^0.16.0",
     "node-sass": "^4.13.1",
     "query-string": "^6.11.0",
@@ -27,6 +28,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
+    "cy:run": "yarn run cypress run -C ./cypress/cypress.json",
+    "cy:open": "yarn run cypress open -C ./cypress/cypress.json",
     "jsonsvr": "json-server -w ./json-server/data/tcc-data.json -c ./json-server/json-server.json"
   },
   "eslintConfig": {

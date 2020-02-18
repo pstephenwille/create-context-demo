@@ -8,7 +8,7 @@ export default (props) => {
     };
 
     return (
-        <div className={`drawer`} onClick={() => toggleDrawer()}>
+        <div id={props.id} className={`drawer`} onClick={() => toggleDrawer()}>
             <h4>{props.title}</h4>
             <div className={`drawer__items${isOpen ? '--open' : '--closed'}`}>
                 {props.children}

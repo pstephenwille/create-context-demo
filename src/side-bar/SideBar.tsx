@@ -3,9 +3,9 @@ import {ActiveToolContext, ActiveToolConsumer} from '../active-tool-context';
 import Drawer from "../drawer/Drawer";
 
 export default (props) => {
-    const makeToolLinks = (items, clickHandler) => {
+    const makeToolLinks = (items, idx, clickHandler) => {
         return (
-            <Drawer title={items.category.name}>
+            <Drawer id={'drawer-'+ idx} title={items.category.name}>
                 {
                     items.category.tools.map((tool, idx) => {
                         return (
@@ -45,7 +45,7 @@ export default (props) => {
                     {
                         props.tools &&
                         props.tools.map((cat, idx) => {
-                            return makeToolLinks(cat, changeActiveTool)
+                            return makeToolLinks(cat, idx, changeActiveTool)
                         })
                     }
                 </section>
