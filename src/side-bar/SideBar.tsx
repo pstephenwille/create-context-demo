@@ -5,7 +5,7 @@ import Drawer from "../drawer/Drawer";
 export default (props) => {
     const makeToolLinks = (items, idx, clickHandler) => {
         return (
-            <Drawer id={'drawer-'+ idx} title={items.category.name}>
+            <Drawer key={'drawer-'+ idx} id={'drawer-' + idx} title={items.category.name}>
                 {
                     items.category.tools.map((tool, idx) => {
                         return (
@@ -40,16 +40,19 @@ export default (props) => {
 
     return (
         <ActiveToolConsumer>
-            {({activeTool, changeActiveTool}) => (
-                <section id={'sideBar'}>
-                    {
-                        props.tools &&
-                        props.tools.map((cat, idx) => {
-                            return makeToolLinks(cat, idx, changeActiveTool)
-                        })
-                    }
-                </section>
-            )}
+            {({activeTool, changeActiveTool}) => {
+                return (
+                    <section id={'sideBar'}>
+                        {
+                            props.tools &&
+                            props.tools.map((cat, idx) => {
+                                return makeToolLinks(cat, idx, changeActiveTool)
+                            })
+                        }
+                    </section>
+                )
+            }
+            }
         </ActiveToolConsumer>
     )
 }

@@ -12,10 +12,9 @@ const App = () => {
     useEffect(
         () => {
             axios.get('http://localhost:3001/v2/tools').then(resp => {
-                setTools(resp['data']['tools']);
+                setTools(resp['data']);
             })
         }, []);
-
 
     return (
         <div id="App">
@@ -36,5 +35,4 @@ const App = () => {
         </div>
     );
 };
-
 export default App;

@@ -8,7 +8,6 @@ function handleClick(name, props) {
 }
 
 export const ServicesList = props => {
-    console.log('...list 2 ', props);
     return (
         <div>
             <h2>mm-tools2</h2>
