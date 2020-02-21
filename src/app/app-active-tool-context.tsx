@@ -1,10 +1,10 @@
-import React, {useState} from 'react';
+import React from 'react';
 
-let ActiveToolContext;
+let AppActiveToolContext;
 const {
     Provider,
     Consumer
-} = (ActiveToolContext = React.createContext(null, null));
+} = (AppActiveToolContext = React.createContext(null, null));
 
 class ActiveToolProvider extends React.Component<any, any> {
    state = {
@@ -50,5 +50,5 @@ class ActiveToolProvider extends React.Component<any, any> {
 export {
     ActiveToolProvider,
     Consumer as ActiveToolConsumer,
-    ActiveToolContext
+    AppActiveToolContext
 };

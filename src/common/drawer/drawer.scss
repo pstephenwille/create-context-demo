@@ -1,7 +1,8 @@
 .drawer {
   &__items {
     &--open {
-      display: block;
+      display: flex;
+      flex-direction: column;
     }
 
     &--closed {

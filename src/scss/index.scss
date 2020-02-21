@@ -1,6 +1,13 @@
 @import-normalize;
 
+@import "reset";
 @import "variables";
 @import "globals";
 @import "default";
-@import "src/drawer/drawer";
+@import "../common/icon-placeholder";
+@import "../app/app";
+@import "../app/app-header-nav";
+@import "src/common/drawer/drawer";
+@import "src/app/app-header-nav";
+@import "../main-body/main-body";
+@import "../side-bar/side-bar";

@@ -1,4 +1,4 @@
-$sizingSteps: (xxs:0.25rem, xs:0.5rem, s:0.75rem, m:1rem, l:1.25rem, xl:1.5rem, xxl:2rem, xxxl:3rem);
+$sizingSteps: (xxs:0.25rem, xs:0.5rem, s:0.75rem, m:1rem, mm:calc(1rem * 1.0625), l:1.25rem, xl:1.5rem, xxl:2rem, xxxl:3rem);
 
 @function get-size($size) {
   @if map-has-key($sizingSteps, $size) {
@@ -9,7 +9,8 @@ $sizingSteps: (xxs:0.25rem, xs:0.5rem, s:0.75rem, m:1rem, l:1.25rem, xl:1.5rem, 
   @return "key not found"
 }
 
-@mixin font($size: false, $weight: false,  $style: false, $color: false) {
+@mixin font($size: false, $weight: normal,  $style: false, $color: false) {
+  // 13,15, 17, 24
   @if $size { font-size: get-size($size); }
   @if $weight { font-weight: $weight; }
   @if $style { font-style: $style; }
@@ -26,3 +27,19 @@ $--title-l: get-size(l);
 $--title-xl: get-size(xl);
 $--title-xxl: get-size(xxl);
 
+
+$portal-color-pallet: (
+        white-gray: #f2f2f2,
+        light-gray: #e6e6e6,
+        med-gray: #656568,
+        dark-gray: #979797,
+);
+
+
+@function portal-color($color){
+  @if map-has_key($portal-color-pallet, $color){
+    @return map-get($portal-color-pallet, $color);
+  }
+
+  @warn "Color (#{$color} not found!";
+}

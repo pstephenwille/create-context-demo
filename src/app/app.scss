@@ -1,0 +1,29 @@
+#App {
+  display: grid;
+  grid-template-columns: 20% 80%;
+  grid-template-rows: auto 50px;
+  grid-gap: 0;
+  padding: 0;
+
+  .header-side-bar-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 20px;
+
+    .title {
+      padding: 3px 0 0 0;
+    }
+  }
+
+  #left-panel {
+    background-color: portal-color(white-gray);
+    border-right: 2px solid portal-color(dark-gray);
+  }
+
+  #dashboard {
+    background-color: transparent;
+    border: none;
+  }
+
+}

@@ -1,0 +1,31 @@
+
+.side-bar-row {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  height: 63px;
+  background-color: white;
+  color: portal-color(dark-gray);
+  padding: 0 0 0 20px;
+  border-bottom: 2px solid portal-color(dark-gray);
+
+  &.sub-nav-border {
+    border-bottom: 1px solid portal-color(light-gray);
+  }
+
+  .sub-nav-link {
+    padding: 0 0 0 20px;
+  }
+}
+.category {
+  margin: 21px 0;
+  padding: 0 0 0 20px;
+}
+#drawer-1 > div > div:nth-child(1) > div{
+  border-top: 2px solid portal-color(dark-gray);
+
+}
+#drawer-0 > div > div:nth-child(1) > div:nth-child(1){
+  border-top: 2px solid portal-color(dark-gray);
+
+}
