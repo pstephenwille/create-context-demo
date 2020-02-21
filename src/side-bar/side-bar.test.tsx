@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import {render, cleanup} from '@testing-library/react';
 import {renderHook} from '@testing-library/react-hooks'
 import SideBar from "./SideBar";
-import {ActiveToolProvider} from "../active-tool-context";
+import {ActiveToolProvider} from "../app/app-active-tool-context";
 
 describe.only('SideBar', () => {
     let tools, toolHook;

@@ -1,0 +1,38 @@
+.icon-placeholder {
+  position: relative;
+  height: 2.75rem; width: 2.75rem;
+  box-sizing: border-box;
+  border: 1px solid portal-color(dark-gray);
+  background-color: white;
+  overflow: hidden;
+  color: portal-color(med-gray);
+  font-size: 13px;
+  margin: 0 15px 0 0;
+
+
+  .line-left {
+    transform: rotate(45deg);
+    margin: 0;
+    width: 55px;
+    position: absolute;
+    top: 20px;
+    left: -8px;
+  }
+
+  .line-right {
+    transform: rotate(-45deg);
+    margin: 0;
+    width: 55px;
+    position: absolute;
+    top: 20px;
+    left: -6px;
+  }
+
+  .icon-text {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    left: 50%;
+  }
+}

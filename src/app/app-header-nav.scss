@@ -1,0 +1,19 @@
+nav{
+  border-bottom: 2px solid portal-color(dark-gray);;
+}
+
+.header-nav {
+  background-color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  .title {
+    margin: 0 auto 0 0;
+  }
+
+  .icon-placeholder:last-of-type {
+    margin: 0 0 0 5rem;
+  }
+}

@@ -1,0 +1,50 @@
+
+main {
+  background-color: portal-color(light-gray);
+}
+
+
+.tool-category {
+  padding: get-size(xxl);
+
+  .title-m--bold {
+    padding-bottom: get-size(xxl);
+  }
+
+  &__tools {
+    background-color: white;
+    border: 2px solid portal-color(dark-gray);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-size: 15px;
+    line-height: 18px;
+    padding: get-size(xxl) 0 0 get-size(xxl);
+
+    &__tool {
+      background-color: white;
+      display: flex;
+      flex-direction: row;
+      margin-right: get-size(xxl);
+      max-width: 300px;
+
+      & > * + * {
+        margin: 0 0 get-size(xxl)
+      }
+
+      .icon-placeholder {
+        display: flex;
+        min-width: 44px;
+      }
+
+      .flex-colx {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .flex-row {
+        max-width: 300px;
+      }
+    }
+  }
+}
