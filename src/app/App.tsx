@@ -5,8 +5,10 @@ import axios from 'axios';
 import MainBody from "../main-body/MainBody";
 import {ActiveToolProvider} from "./app-active-tool-context";
 import IconPlaceholder from "../common/IconPlaceholder";
+import ExampleComponent from 'rollup-test';
 
 const App = () => {
+console.log('...rollup ', ExampleComponent);
     const history = createHashHistory();
     const [tools, setTools] = useState([]);
 
@@ -28,6 +30,7 @@ const App = () => {
                                 <div className={'line'}/>
                             </div>
                             <h1 className={'title-l'}>Tools Portal</h1>
+                            <ExampleComponent text={'woot'}/>
                         </div>
 
                         <div id={'dashboard'} className={'side-bar-row'}>

@@ -10983,6 +10983,10 @@ ripemd160@^2.0.0, ripemd160@^2.0.1:
     hash-base "^3.0.0"
     inherits "^2.0.1"
 
+"rollup-test@file:../../react-rollup/rollup-test-1.0.0.tgz":
+  version "1.0.0"
+  resolved "file:../../react-rollup/rollup-test-1.0.0.tgz#19bbfd120fe4c637c70133120793217525c50e0c"
+
 rst-selector-parser@^2.2.3:
   version "2.2.3"
   resolved "https://registry.yarnpkg.com/rst-selector-parser/-/rst-selector-parser-2.2.3.tgz#81b230ea2fcc6066c89e3472de794285d9b03d91"
